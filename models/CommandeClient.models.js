@@ -2,9 +2,13 @@ const mongoose= require("mongoose");
 
 //CommandeClient Schema
 const CommandeClientSchema = new mongoose.Schema({
-    numeromCommandeClient:{
+    numeroCommandeClient:{
         type:String,
         required: true
+    },
+    commandeClientNumero:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Client'
     }
 });
 
